@@ -1,5 +1,14 @@
 # Getting Started with Create React App
 
+yarn create react-app my-app --template typescript
+
+cd my-app
+
+yarn add --dev electron electron-builder concurrently wait-on cross-env
+
+yarn add electron-is-dev
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
