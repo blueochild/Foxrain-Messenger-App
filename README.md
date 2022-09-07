@@ -1,3 +1,8 @@
+# What you need to run 
+
+    yarn add --dev electron electron-builder concurrently wait-on cross-env
+    yarn add electron-is-dev
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
