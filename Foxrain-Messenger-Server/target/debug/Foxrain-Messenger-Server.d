@@ -1,0 +1,1 @@
+C:\Users\Administrator\Downloads\Foxrain-Messenger-App\Foxrain-Messenger-Server\target\debug\Foxrain-Messenger-Server.exe: C:\Users\Administrator\Downloads\Foxrain-Messenger-App\Foxrain-Messenger-Server\src\main.rs

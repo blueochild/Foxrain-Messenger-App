@@ -1,0 +1,10 @@
+C:\Users\Administrator\Downloads\Foxrain-Messenger-App\Foxrain-Messenger-Server\target\debug\deps\actix_codec-499d3ac66a2f2759.rmeta: C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src/lib.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\bcodec.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\framed.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\lines.rs
+
+C:\Users\Administrator\Downloads\Foxrain-Messenger-App\Foxrain-Messenger-Server\target\debug\deps\libactix_codec-499d3ac66a2f2759.rlib: C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src/lib.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\bcodec.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\framed.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\lines.rs
+
+C:\Users\Administrator\Downloads\Foxrain-Messenger-App\Foxrain-Messenger-Server\target\debug\deps\actix_codec-499d3ac66a2f2759.d: C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src/lib.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\bcodec.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\framed.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\lines.rs
+
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src/lib.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\bcodec.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\framed.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\actix-codec-0.5.0\src\lines.rs:

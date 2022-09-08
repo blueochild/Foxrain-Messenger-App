@@ -1,0 +1,11 @@
+c:\Users\Administrator\Downloads\Foxrain-Messenger-App\Foxrain-Messenger-Server\target\debug\deps\url-ff0d8a772eaf6d68.rmeta: C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\lib.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\host.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\origin.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\parser.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\path_segments.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\slicing.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\quirks.rs
+
+c:\Users\Administrator\Downloads\Foxrain-Messenger-App\Foxrain-Messenger-Server\target\debug\deps\url-ff0d8a772eaf6d68.d: C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\lib.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\host.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\origin.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\parser.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\path_segments.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\slicing.rs C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\quirks.rs
+
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\host.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\origin.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\parser.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\path_segments.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\slicing.rs:
+C:\Users\Administrator\.cargo\registry\src\github.com-1ecc6299db9ec823\url-2.3.0\src\quirks.rs:
