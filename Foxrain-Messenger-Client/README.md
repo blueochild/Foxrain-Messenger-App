@@ -3,6 +3,7 @@
     yarn add --dev electron electron-builder concurrently wait-on cross-env
     yarn add electron-is-dev
     yarn add @types/react
+    yarn add react-router-dom
 
 # Getting Started with Create React App
 
