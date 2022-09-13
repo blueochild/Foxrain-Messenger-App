@@ -4,6 +4,7 @@
     yarn add electron-is-dev
     yarn add @types/react
     yarn add react-router-dom
+    yarn add @reduxjs/toolkit
 
 # Getting Started with Create React App
 
