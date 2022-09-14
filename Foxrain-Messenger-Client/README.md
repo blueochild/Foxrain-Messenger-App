@@ -5,6 +5,7 @@
     yarn add @types/react
     yarn add react-router-dom
     yarn add @reduxjs/toolkit
+    yarn add axios
 
 # Getting Started with Create React App
 
