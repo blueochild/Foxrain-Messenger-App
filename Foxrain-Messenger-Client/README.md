@@ -6,6 +6,7 @@
     yarn add react-router-dom
     yarn add @reduxjs/toolkit
     yarn add axios
+    yarn add redux react-redux redux-devtools-extension redux-logger
 
 # Getting Started with Create React App
 
