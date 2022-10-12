@@ -7,6 +7,7 @@
     yarn add @reduxjs/toolkit
     yarn add axios
     yarn add redux react-redux redux-devtools-extension redux-logger
+    yarn global add typescript
 
 # Getting Started with Create React App
 
