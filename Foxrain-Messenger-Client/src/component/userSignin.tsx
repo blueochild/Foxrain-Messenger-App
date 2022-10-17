@@ -2,7 +2,7 @@ import { IuserLogin } from "./userType";
 
 
 function UserSignin({ loginUser, onChange, onLogin, onLogout }: IuserLogin) {
-    if (loginUser.isLogin == true) { 
+    if (loginUser.isLogin == true) {
         return (
             <div>
                 <b>userName</b>
@@ -14,20 +14,23 @@ function UserSignin({ loginUser, onChange, onLogin, onLogout }: IuserLogin) {
     }
     else {
         return (
-            <div>
-                <input
-                    name="LoginId"
-                    type="text"
-                    placeholder="Id"
-                    onChange={onChange}
-                />
-                <input
-                    name="LoginPwd"
-                    type="password"
-                    placeholder="Password"
-                    onChange={onChange}
-                />
-                <button onClick={onLogin}>Login</button>
+            <div className="loginBox">
+                <div className="loginUser">
+                    <input
+                        name="LoginId"
+                        type="text"
+                        placeholder="Id"
+                        onChange={onChange}
+                    />
+                    <input
+                        name="LoginPwd"
+                        type="password"
+                        placeholder="Password"
+                        onChange={onChange}
+                    />
+                    <button onClick={onLogin}>Login</button>
+                </div>
+                <a href="">register</a>
             </div>
         );
     }

@@ -1,9 +1,11 @@
-import React, { ChangeEventHandler, MouseEventHandler, useRef, useState } from 'react';
-import './style/App.css';
-import UserSignup from './component/userSignup';
-import UserList from './component/userList'
+import React, { useRef, useState } from 'react';
 import { IuserInfo, IuserStat } from './component/userType';
+import UserSignup from './component/userSignup';
 import UserSignin from './component/userSignin';
+import UserList from './component/userList'
+
+/* page CSS */
+import './style/App.css';
 
 const defaultUserStat : IuserStat = {
   nickname : "guest",
@@ -124,16 +126,21 @@ function App() {
     if(!LoginId) { alert('ID를 입력하세요.'); return; };
     if(!LoginPwd) { alert('Password를 입력하세요.'); return; };
 
-    users.filter(user => {
-      if(user.userId === LoginId) { 
-        if(user.userPwd === LoginPwd) { 
-          setLoginUser({
-            isLogin: true,
-            isUserCode: user.userCode
-          });
-        }
-      }
-    })
+    // (), {} 의 차이를 알고 사용하자 ( 조건에서 {} 사용시, 반환값 에러 나타남 )
+    const islogin = users.filter(user => (
+      user.userId === LoginId && 
+      user.userPwd === LoginPwd
+    ))
+
+    if(islogin.length === 1){
+      setLoginUser({
+        isLogin: true,
+        isUserCode: islogin[0].userCode
+      });
+    }
+    else{
+      alert("ID가 존재하지 않거나 비밀번호가 틀렸습니다.");
+    }
 
   };
 
