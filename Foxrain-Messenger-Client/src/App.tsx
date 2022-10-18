@@ -3,6 +3,7 @@ import { IuserInfo, IuserStat } from './component/userType';
 import UserSignup from './component/userSignup';
 import UserSignin from './component/userSignin';
 import UserList from './component/userList'
+import Signup from './features/signup/signup'
 
 /* page CSS */
 import './style/App.css';
@@ -161,6 +162,7 @@ function App() {
         onChange={registOnChange}
       />
       <UserList users={users} onToggle={onToggle} onRemove={onRemove} />
+      <Signup></Signup>
     </div>
   );
 }
