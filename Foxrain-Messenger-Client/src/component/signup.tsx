@@ -1,36 +1,27 @@
-import React, { Dispatch, useState } from 'react'
-import { useAppSelector, useAppDispatch } from '../../app/hooks'
-import { IuserInfo } from '../sliceTypes'
-import { signupRequest, signupSuccess, signupError } from './signupSlice'
-import { userAdded, userDeleted, userManageReq } from './userManagementSlice';
-import UserList from './userList'
-
-interface SignupParam {
-  user: IuserInfo;
-}
+import { ChangeEvent, useState } from 'react'
+import { useAppSelector, useAppDispatch } from '../app/hooks'
+import { IuserInfo } from '../features/sliceTypes'
+import { userAdded, userDeleted, userManageReq } from '../features/user/userManagementSlice';
 
 function Signup() {
-  // The `state` arg is correctly typed as `RootState` already
-  const user = useAppSelector((state) => state.signup.user)
+  const users = useAppSelector((state) => state.users)
   const dispatch = useAppDispatch()
-
-  // omit rendering logic
 
   const [Email, setEmail] = useState("");
   const [Pwd, setPwd] = useState("");
   const [Name, setEName] = useState("");
   const [Birth, setBirth] = useState<Date>(new Date('00000000'));
 
-  const onEmailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onEmailHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value)
   }
-  const onPwdHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onPwdHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setPwd(e.target.value)
   }
-  const onNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setEName(e.target.value)
   }
-  const onBirthHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onBirthHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const newDate = new Date(e.target.value)
     setBirth(newDate)
   }
@@ -45,14 +36,6 @@ function Signup() {
 
   return (
     <div>
-      <UserList/>
-      <div>
-        <p>userName : {user.uEmail}</p>
-        <p>userPwd : {user.uPwd}</p>
-        <p>userName : {user.uName}</p>
-        <p>userBirth : {user.uBirth.toString()}</p>
-      </div>
-
       <input
         type="text"
         name="userEmail"
@@ -82,7 +65,6 @@ function Signup() {
         onChange={onBirthHandler}
       />
       <button onClick={() => { dispatch(userAdded(userData)) }}>다음</button>
-      <button onClick={() => { dispatch(userDeleted(userData)) }}>삭제</button>
     </div>
   );
 }

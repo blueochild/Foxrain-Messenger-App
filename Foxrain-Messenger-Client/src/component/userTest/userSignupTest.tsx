@@ -1,4 +1,4 @@
-import { IuserSignup } from "./userType";
+import { IuserSignup } from "./userTypeTest";
 
 function CreateUser({ userId, userPwd, userEmail, userPhone, onRegist, onChange } : IuserSignup)
 {

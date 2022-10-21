@@ -1,12 +1,14 @@
 import React, { useRef, useState } from 'react';
-import { IuserInfo, IuserStat } from './component/userType';
-import UserSignup from './component/userSignup';
-import UserSignin from './component/userSignin';
+import { IuserInfo, IuserStat } from './component/userTest/userTypeTest';
+import UserSignup from './component/userTest/userSignupTest';
+import UserSignin from './component/userTest/userSigninTest';
+//import UserList from './component/userTest/userListTest'
+import Signup from './component/signup'
 import UserList from './component/userList'
-import Signup from './features/signup/signup'
 
 /* page CSS */
 import './style/App.css';
+import UserDelete from './component/userDelete';
 
 const defaultUserStat : IuserStat = {
   nickname : "guest",
@@ -16,6 +18,7 @@ const defaultUserStat : IuserStat = {
 
 function App() {
 
+  /*
   const [loginUser, setLoginUser] = useState({
     isLogin: false,
     isUserCode: ''
@@ -144,25 +147,13 @@ function App() {
     }
 
   };
+  */
 
   return (
     <div className="App">
-      <UserSignin 
-        loginUser={loginUser}
-        onChange={loginOnChange}
-        onLogin={onLogin}
-        onLogout={onLogout}
-      />
-      <UserSignup
-        userId={userId}
-        userPwd={userPwd}
-        userEmail={userEmail}
-        userPhone={userPhone}
-        onRegist={onRegist}
-        onChange={registOnChange}
-      />
-      <UserList users={users} onToggle={onToggle} onRemove={onRemove} />
-      <Signup></Signup>
+      <UserList/>
+      <Signup />
+      <UserDelete />
     </div>
   );
 }

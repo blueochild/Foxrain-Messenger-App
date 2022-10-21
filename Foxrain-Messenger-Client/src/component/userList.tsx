@@ -1,44 +1,29 @@
-import React from "react";
-import { IuserInfo } from "./userType";
+import { useAppSelector } from "../app/hooks";
+import { IuserInfo } from '../features/sliceTypes'
 
-interface usersProps {
-    users: IuserInfo[];
-    onToggle: (Tuser: string) => void;
-    onRemove: (Tuser: string) => void;
-}
-interface userProps {
-    user: IuserInfo;
-    onToggle: (Tuser: string) => void;
-    onRemove: (Tuser: string) => void;
+interface userPrint{
+    user: IuserInfo
 }
 
-function User({ user, onToggle, onRemove}: userProps) {
-
-    return (
+function UsersPrint({ user }: userPrint){
+    return(
         <div>
-            <span style={{
-                cursor:'pointer',
-                color: user.userState.active ? 'green' : 'black'}}
-                onClick={() => onToggle(user.userId)}>
-                <b>{user.userId}</b>({user.userState?.nickname})
-            </span>
-            &nbsp;/&nbsp;
-            <span>{user.userEmail}</span>
-            <button onClick={() => onRemove(user.userId)}>삭제</button>
+            <b>{user.uName}</b>({user.uId} / {user.uEmail})
         </div>
-    );
+    )
 }
 
-function UserList({ users, onToggle, onRemove }: usersProps){
-    return (
-        <div>
-            {
-                users.map(user => (
-                    <User user={user} key={user.userCode} onToggle={onToggle} onRemove={onRemove}/>
-                ))
-            }
-        </div>
-    );
+function UserList(){
+    
+  const users = useAppSelector((state) => state.users)
+
+  return(
+    <div>
+        {users.map(e => (
+            <UsersPrint user={e.user.info} key={e.user.info.uId}/>
+        ))}
+    </div>
+  )
 }
 
 export default UserList;

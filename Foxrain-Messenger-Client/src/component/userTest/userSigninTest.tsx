@@ -1,5 +1,4 @@
-import { IuserLogin } from "./userType";
-
+import { IuserLogin } from "./userTypeTest";
 
 function UserSignin({ loginUser, onChange, onLogin, onLogout }: IuserLogin) {
     if (loginUser.isLogin == true) {
