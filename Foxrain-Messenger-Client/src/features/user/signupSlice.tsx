@@ -17,7 +17,7 @@ const initialState: initialStateType = {
     uBirth: new Date('2000-01-01'), // YYYYMMDD
   },
   userState: {
-    active: false,
+    active: "OFFLINE",
     stat: "LOADING"
   }
 }

@@ -11,7 +11,7 @@ const initialUserInfo: IuserInfo = {
 }
 
 const initialUserActivity: IuserState = {
-    active: false,
+    active: "OFFLINE",
     stat: "SIGNUP"
 }
 
@@ -30,7 +30,7 @@ export const usersSlice = createSlice({
     name: 'users',
     initialState,
     reducers: {
-        userManageReq: (state, action) => {
+        userManageReq: (state, action: PayloadAction<IuserInfo>) => {
             
         },
         userAdded: (state, action: PayloadAction<IuserInfo>) => {
@@ -49,13 +49,13 @@ export const usersSlice = createSlice({
             state.filter(e => 
                 e.user.info.uEmail === action.payload.uEmail && 
                 e.user.info.uPwd === action.payload.uPwd 
-            )[0].user.userActivity.active = true
+            )[0].user.userActivity.active = "ONLINE"
         },
         userSignout: (state, action: PayloadAction<IuserInfo>) => {
             state.filter(e => 
                 e.user.info.uEmail === action.payload.uEmail && 
                 e.user.info.uPwd === action.payload.uPwd 
-            )[0].user.userActivity.active = false
+            )[0].user.userActivity.active = "OFFLINE"
         }
     },
 })
