@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { IuserInfo } from '../sliceTypes'
+import { IuserInfo, IuserState } from '../sliceTypes'
+import {  } from './userManagementSlice'
 
 interface initialStateType {
   user: IuserInfo;
+  userState: IuserState
 }
 
 const initialState: initialStateType = {
@@ -12,7 +14,11 @@ const initialState: initialStateType = {
     uEmail: "",
     uPwd: "",
     uName: "",
-    uBirth: new Date('00000000'), // YYYYMMDD
+    uBirth: new Date('2000-01-01'), // YYYYMMDD
+  },
+  userState: {
+    active: false,
+    stat: "LOADING"
   }
 }
 
@@ -21,7 +27,7 @@ export const signinSlice = createSlice({
   initialState,
   reducers: {
     signupRequest: (state, action: PayloadAction<IuserInfo>) => {
-      state.user = action.payload
+      state.user = action.payload // 다른 데이터와의 중복 체크해야함
     },
     signupSuccess: (state, action: PayloadAction<IuserInfo>) => {
       state.user = action.payload
