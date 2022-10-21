@@ -4,8 +4,8 @@ export interface IuserInfo{
     uId?: string;
     uEmail: string;
     uPwd: string;
-    uName: string;
-    uBirth: Date;
+    uName?: string;
+    uBirth?: Date;
 }
 
 export interface SigninState{
@@ -14,11 +14,11 @@ export interface SigninState{
 }
 
 export interface IuserState{
-    active: false;
+    active: boolean;
     stat: "LOADING" | "SIGNIN" | "SIGNUP" | "SUCCESS" | "ERROR";
 }
 
 export interface initialStateType {
-    user: IuserInfo;
-    userState: IuserState
+    info: IuserInfo;
+    userActivity: IuserState
   }

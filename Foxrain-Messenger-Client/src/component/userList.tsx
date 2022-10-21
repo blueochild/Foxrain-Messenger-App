@@ -1,14 +1,16 @@
 import { useAppSelector } from "../app/hooks";
-import { IuserInfo } from '../features/sliceTypes'
+import { initialStateType } from '../features/sliceTypes'
 
-interface userPrint{
-    user: IuserInfo
+interface users{
+    user: initialStateType;
 }
 
-function UsersPrint({ user }: userPrint){
+function UsersPrint({ user }: users){
     return(
         <div>
-            <b>{user.uName}</b>({user.uId} / {user.uEmail})
+            <b style={{
+                color : user.userActivity.active ? "green" : "black"
+            }}>{user.info.uName}</b>({user.info.uId} / {user.info.uEmail})
         </div>
     )
 }
@@ -20,7 +22,7 @@ function UserList(){
   return(
     <div>
         {users.map(e => (
-            <UsersPrint user={e.user.info} key={e.user.info.uId}/>
+            <UsersPrint user={e.user} key={e.user.info.uId}/>
         ))}
     </div>
   )

@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from '../app/hooks'
 import { IuserInfo } from '../features/sliceTypes'
 import { userAdded, userDeleted, userManageReq } from '../features/user/userManagementSlice';
 
-function Signup() {
+function UserSignup() {
   const users = useAppSelector((state) => state.users)
   const dispatch = useAppDispatch()
 
@@ -69,4 +69,4 @@ function Signup() {
   );
 }
 
-export default Signup
+export default UserSignup

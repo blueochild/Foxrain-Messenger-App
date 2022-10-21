@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { IuserInfo, IuserState } from '../sliceTypes'
+import { initialStateType, IuserInfo, IuserState } from '../sliceTypes'
 
-interface initialStateType {
-    info: IuserInfo;
-    userActivity: IuserState
+const initialUserInfo: IuserInfo = {
+    uId: "0",
+    uEmail: "",
+    uPwd: "",
+    uName: "",
+    uBirth: new Date('2000-01-01'), // YYYYMMDD
 }
 
 const initialUserActivity: IuserState = {
@@ -13,13 +16,7 @@ const initialUserActivity: IuserState = {
 }
 
 const initialUserState: initialStateType = {
-    info: {
-        uId: "0",
-        uEmail: "",
-        uPwd: "",
-        uName: "",
-        uBirth: new Date('2000-01-01'), // YYYYMMDD
-    },
+    info: { ...initialUserInfo },
     userActivity: initialUserActivity
 }
 
@@ -33,8 +30,8 @@ export const usersSlice = createSlice({
     name: 'users',
     initialState,
     reducers: {
-        userManageReq: (state, action: PayloadAction<IuserInfo>) => {
-            userAdded(action.payload)
+        userManageReq: (state, action) => {
+            
         },
         userAdded: (state, action: PayloadAction<IuserInfo>) => {
             const nextUid = (Number(state[state.length - 1].user.info.uId) + 1).toString()
@@ -48,10 +45,22 @@ export const usersSlice = createSlice({
         userDeleted: (state, action: PayloadAction<IuserInfo>) => {
             return state.filter(e => e.user.info.uName !== action.payload.uName)
         },
+        userSignin: (state, action: PayloadAction<IuserInfo>) => {
+            state.filter(e => 
+                e.user.info.uEmail === action.payload.uEmail && 
+                e.user.info.uPwd === action.payload.uPwd 
+            )[0].user.userActivity.active = true
+        },
+        userSignout: (state, action: PayloadAction<IuserInfo>) => {
+            state.filter(e => 
+                e.user.info.uEmail === action.payload.uEmail && 
+                e.user.info.uPwd === action.payload.uPwd 
+            )[0].user.userActivity.active = false
+        }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { userManageReq, userAdded, userDeleted } = usersSlice.actions
+export const { userManageReq, userAdded, userDeleted, userSignin, userSignout } = usersSlice.actions
 
 export default usersSlice.reducer
