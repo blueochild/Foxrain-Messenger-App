@@ -1,10 +1,9 @@
 import { ChangeEvent, useState } from 'react'
-import { useAppSelector, useAppDispatch } from '../app/hooks'
+import { useAppDispatch } from '../app/hooks'
 import { IuserInfo } from '../features/sliceTypes'
-import { userAdded, userDeleted, userManageReq } from '../features/user/userManagementSlice';
+import { userSignup } from '../features/user/userManagementSlice';
 
 function UserSignup() {
-  const users = useAppSelector((state) => state.users)
   const dispatch = useAppDispatch()
 
   const [Email, setEmail] = useState("");
@@ -64,7 +63,7 @@ function UserSignup() {
         value='2022-10-18'
         onChange={onBirthHandler}
       />
-      <button onClick={() => { dispatch(userAdded(userData)) }}>다음</button>
+      <button onClick={() => { dispatch(userSignup(userData)) }}>다음</button>
     </div>
   );
 }

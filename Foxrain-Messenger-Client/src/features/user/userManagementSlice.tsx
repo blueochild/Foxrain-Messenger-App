@@ -16,7 +16,7 @@ const initialUserActivity: IuserState = {
 }
 
 const initialUserState: initialStateType = {
-    info: { ...initialUserInfo },
+    info: initialUserInfo,
     userActivity: initialUserActivity
 }
 
@@ -33,7 +33,7 @@ export const usersSlice = createSlice({
         userManageReq: (state, action: PayloadAction<IuserInfo>) => {
             
         },
-        userAdded: (state, action: PayloadAction<IuserInfo>) => {
+        userSignup: (state, action: PayloadAction<IuserInfo>) => {
             const nextUid = (Number(state[state.length - 1].user.info.uId) + 1).toString()
             const item = { 
                 user: { 
@@ -61,6 +61,6 @@ export const usersSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { userManageReq, userAdded, userDeleted, userSignin, userSignout } = usersSlice.actions
+export const { userManageReq, userSignup, userDeleted, userSignin, userSignout } = usersSlice.actions
 
 export default usersSlice.reducer

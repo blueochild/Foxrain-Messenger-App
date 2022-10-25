@@ -6,10 +6,19 @@ interface users{
 }
 
 function UsersPrint({ user }: users){
+    
+    let activeColor: string = "gray"
+
+    switch (user.userActivity.active) {
+        case "ONLINE": activeColor = "green"; break;
+        case "OFFLINE": activeColor = "gray"; break;
+        case "BUSY": activeColor = "red"; break;
+    }
+
     return(
         <div>
             <b style={{
-                color : user.userActivity.active ? "green" : "black"
+                color : activeColor
             }}>{user.info.uName}</b>({user.info.uId} / {user.info.uEmail})
         </div>
     )

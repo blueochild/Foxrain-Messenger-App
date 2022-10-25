@@ -13,10 +13,6 @@ export interface SigninState{
     userPwd: string;
 }
 
-type Tactive = {
-    active: "ONLINE" | "OFFLINE" | "BUSY"
-}
-
 export interface IuserState{
     active: "ONLINE" | "OFFLINE" | "BUSY";
     stat: "LOADING" | "SIGNIN" | "SIGNUP" | "SUCCESS" | "ERROR";
