@@ -8,6 +8,8 @@
     yarn add axios
     yarn add redux react-redux redux-devtools-extension redux-logger
     yarn global add typescript
+    yarn add redux-router-dom
+    yarn add redux-persist
 
 # Getting Started with Create React App
 

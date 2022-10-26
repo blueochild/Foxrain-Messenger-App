@@ -1,21 +1,18 @@
 import { ChangeEvent, useState } from "react"
-import { useAppDispatch, useAppSelector } from "../app/hooks"
+import { useAppDispatch } from "../app/hooks"
 import { IuserInfo } from "../features/sliceTypes"
 import { userSignin, userSignout } from "../features/user/userManagementSlice"
 
-function UserSignin(){
-    const user = useAppSelector((state) => state.users)
+function UserSignin() {
     const dispatch = useAppDispatch()
-
-    const isLoginCookie = false
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const emailHandler = function(e : ChangeEvent<HTMLInputElement>){
+    const emailHandler = function (e: ChangeEvent<HTMLInputElement>) {
         setEmail(e.target.value)
     }
-    const passwordHandler = function(e : ChangeEvent<HTMLInputElement>){
+    const passwordHandler = function (e: ChangeEvent<HTMLInputElement>) {
         setPassword(e.target.value)
     }
 
@@ -24,25 +21,23 @@ function UserSignin(){
         uPwd: password
     }
 
-    return(
-        <>
-                <div>
-                    <input 
-                        type="text"
-                        placeholder="Email Addr"
-                        value={email}
-                        onChange={emailHandler}
-                    />
-                    <input 
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={passwordHandler}
-                    />
-                    <button onClick={() => dispatch(userSignin(userDate))}>Sign in</button>
-                    <button onClick={() => dispatch(userSignout(userDate))}>Sign out</button>
-                </div>
-        </>
+    return (
+        <div>
+            <input
+                type="text"
+                placeholder="Email Addr"
+                value={email}
+                onChange={emailHandler}
+            />
+            <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={passwordHandler}
+            />
+            <button onClick={() => dispatch(userSignin(userDate))}>Sign in</button>
+            <button onClick={() => dispatch(userSignout(userDate))}>Sign out</button>
+        </div>
     )
 }
 

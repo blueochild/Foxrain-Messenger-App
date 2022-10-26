@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from 'react'
-import { useAppSelector, useAppDispatch } from '../app/hooks'
+import { useAppDispatch } from '../app/hooks'
 import { IuserInfo } from '../features/sliceTypes'
 import { userDeleted } from '../features/user/userManagementSlice';
 
