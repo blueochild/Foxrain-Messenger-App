@@ -10,6 +10,7 @@
     yarn global add typescript
     yarn add redux-router-dom
     yarn add redux-persist
+    yarn add react-bootstrap bootstrap
 
 # Test json Server
 /src/jsonServer
