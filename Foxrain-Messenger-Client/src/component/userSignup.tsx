@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react'
 import { useAppDispatch } from '../app/hooks'
 import { IuserInfo } from '../features/sliceTypes'
-import { userSignup } from '../features/user/userManagementSlice';
+import { userSignup, userSignupPost } from '../features/user/userManagementSlice';
 
 function UserSignup() {
   const dispatch = useAppDispatch()
@@ -63,7 +63,7 @@ function UserSignup() {
         value='2022-10-18'
         onChange={onBirthHandler}
       />
-      <button onClick={() => { dispatch(userSignup(userData)) }}>다음</button>
+      <button onClick={() => { dispatch(userSignupPost(userData)) }}>다음</button>
     </div>
   );
 }

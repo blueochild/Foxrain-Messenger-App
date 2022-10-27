@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "uId": "0",
+      "uEmail": "Test@test.com",
+      "uPwd": "PPPP",
+      "uName": "Park",
+      "uBirth": "2003/03/14",
+      "isSignin": {
+        "isSignin": false,
+        "signinUserToken": "testTOKENtest",
+        "signinState": "IDLE"
+      }
+    },
+    {
+      "id": 2,
+      "uId": "1",
+      "uEmail": "TESTINGER@naver.com",
+      "uPwd": "1234ASD",
+      "uName": "테스터",
+      "uBirth": "1999-12-31T15:00:00.000Z",
+      "isSignin": {
+        "isSignin": false,
+        "signinUserToken": "테스터TOKEN테스터",
+        "signinState": "IDLE"
+      }
+    }
+  ]
+}

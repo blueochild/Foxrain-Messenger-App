@@ -1,7 +1,9 @@
 import { ChangeEvent, useState } from "react"
+import { Link } from "react-router-dom"
 import { useAppDispatch } from "../app/hooks"
 import { IuserInfo } from "../features/sliceTypes"
-import { userSignin, userSignout } from "../features/user/userManagementSlice"
+//import { userSignin, userSignout } from "../features/user/userManagementSlice"
+import { userSignin } from "../features/user/signinSlice"
 
 function UserSignin() {
     const dispatch = useAppDispatch()
@@ -21,23 +23,39 @@ function UserSignin() {
         uPwd: password
     }
 
+    const signinFunc = () => {
+        if(email === "") {
+            alert("이메일을 입력해주세요.")
+            return
+        }
+        else if(password === ""){
+            alert("비밀번호를 입력해주세요.")
+            return
+        }
+        dispatch(userSignin(userDate))
+    }
+
     return (
-        <div>
-            <input
-                type="text"
-                placeholder="Email Addr"
-                value={email}
-                onChange={emailHandler}
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={passwordHandler}
-            />
-            <button onClick={() => dispatch(userSignin(userDate))}>Sign in</button>
-            <button onClick={() => dispatch(userSignout(userDate))}>Sign out</button>
-        </div>
+        <>
+            <div>
+                <input
+                    type="text"
+                    placeholder="Email Addr"
+                    value={email}
+                    onChange={emailHandler}
+                />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={passwordHandler}
+                />
+                <button onClick={signinFunc}>Sign in</button>
+            </div>
+            <div>
+                계정이 없으신가요?<Link to={"/signup"}>가입하기</Link>
+            </div>
+        </>
     )
 }
 

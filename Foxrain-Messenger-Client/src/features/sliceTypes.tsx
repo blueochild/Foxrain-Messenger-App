@@ -1,6 +1,7 @@
+import { SerializedError } from "@reduxjs/toolkit";
 
 // signUp need Data
-export interface IuserInfo{
+export interface IuserInfo {
     uId?: string;
     uEmail: string;
     uPwd: string;
@@ -8,12 +9,12 @@ export interface IuserInfo{
     uBirth?: Date;
 }
 
-export interface SigninState{
+export interface SigninState {
     userEmail: string;
     userPwd: string;
 }
 
-export interface IuserState{
+export interface IuserState {
     active: "ONLINE" | "OFFLINE" | "BUSY";
     stat: "LOADING" | "SIGNIN" | "SIGNUP" | "SUCCESS" | "ERROR";
 }
@@ -21,4 +22,11 @@ export interface IuserState{
 export interface initialStateType {
     info: IuserInfo;
     userActivity: IuserState
-  }
+}
+
+export interface isSignin {
+    isSignin: Boolean;
+    signinUserToken: string;
+    signinState: "IDLE" | "LOADING" | "SIGNIN" | "SIGNOUT";
+    signinRejectReason?: SerializedError;
+}
