@@ -8,10 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import store, { persistor } from './store';
 import { Provider } from 'react-redux';
-import { useAppSelector } from './hooks';
 
 /* page CSS */
-//import './style/App.css';
 
 function App() {
 

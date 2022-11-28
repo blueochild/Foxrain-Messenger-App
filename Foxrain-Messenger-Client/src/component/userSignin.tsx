@@ -5,6 +5,8 @@ import { IuserInfo } from "../features/sliceTypes"
 //import { userSignin, userSignout } from "../features/user/userManagementSlice"
 import { userSignin } from "../features/user/signinSlice"
 
+import '../style/signinPage.css';
+
 function UserSignin() {
     const dispatch = useAppDispatch()
 
@@ -18,7 +20,7 @@ function UserSignin() {
         setPassword(e.target.value)
     }
 
-    const userDate: IuserInfo = {
+    const userData: IuserInfo = {
         uEmail: email,
         uPwd: password
     }
@@ -32,11 +34,11 @@ function UserSignin() {
             alert("비밀번호를 입력해주세요.")
             return
         }
-        dispatch(userSignin(userDate))
+        dispatch(userSignin(userData))
     }
 
     return (
-        <>
+        <div className="userBox">
             <div>
                 <input
                     type="text"
@@ -55,7 +57,7 @@ function UserSignin() {
             <div>
                 계정이 없으신가요?<Link to={"/signup"}>가입하기</Link>
             </div>
-        </>
+        </div>
     )
 }
 

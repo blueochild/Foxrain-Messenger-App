@@ -38,7 +38,7 @@ export const userSignupPost = createAsyncThunk(
         const uBirth = data.uBirth;
 
         const response = await axios.post("http://localhost:4000/users", {
-            id: 2, // 꼭 필요한듯?
+            id: 3, // 꼭 필요한듯?
             uId: uId,
             uEmail: uEmail,
             uPwd: uPwd,

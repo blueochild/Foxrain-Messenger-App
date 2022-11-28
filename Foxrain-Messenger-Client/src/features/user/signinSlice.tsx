@@ -31,7 +31,7 @@ export const signinSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(userSignin.pending, (state, action) => {
-                state.isSignin = false;
+                state.isSignin = false
                 state.signinState = "LOADING"
             })
             .addCase(userSignin.fulfilled, (state, action) => {

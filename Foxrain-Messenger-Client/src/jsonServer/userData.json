@@ -24,6 +24,19 @@
         "signinUserToken": "테스터TOKEN테스터",
         "signinState": "IDLE"
       }
+    },
+    {
+      "id": 3,
+      "uId": "1",
+      "uEmail": "Hello@hello.test",
+      "uPwd": "ASD123",
+      "uName": "tesrzxcsa",
+      "uBirth": "1999-12-31T15:00:00.000Z",
+      "isSignin": {
+        "isSignin": false,
+        "signinUserToken": "tesrzxcsaTOKENtesrzxcsa",
+        "signinState": "IDLE"
+      }
     }
   ]
 }
